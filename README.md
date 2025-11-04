@@ -1,2 +1,21 @@
-# Sprint_6
-Финальный проект шестого спринта
+Финальный проект 5 спринта курса "Автоматизатор тестирования на Python" от Яндекс Практикум на тему "Page Object". Проект автоматизации тестирования сайта заказа самокатов https://qa-scooter.praktikum-services.ru/
+
+Структура: 
+allure_results - сожержит отчеты alure 
+locators - директория локаторов 
+locators/main_page_locators.py - локаторы для главной страницы 
+locators/order_page_locators.py - локаторы для страницы заказа 
+pages - директория методов страниц 
+pages/base_page.py - общие методы 
+pages/main_page.py - методы для главной страницы 
+pages/order_page.py - методы для страницы заказа 
+tests - директория тестов 
+tests/test_faq.py - тесты для вопросов 
+tests/test_order.py - тесты для страницы заказа 
+conftest.py - файл с фикстурами 
+data.py - данные для параметризации 
+README.md - описание проекта
+requirements - файл с внешними зависимостями
+urls.py - файл с константами URL
+
+Команда для запуска тестов: py -m pytest tests/ -v
