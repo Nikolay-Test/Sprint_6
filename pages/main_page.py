@@ -1,5 +1,6 @@
 from locators.main_page_locators import MainPageLocators
 from pages.base_page import BasePage
+from urls import Urls
 import allure
 
 
@@ -38,4 +39,8 @@ class MainPage(BasePage):
         self.wait_and_find_element(question_loc).click()
         answer_text = self.wait_and_find_element(answer_loc).text
         return question_text, answer_text
+    
+    @allure.step("Проверка редиректа на страницу заказа")
+    def check_redirect_to_order_page(self):
+        return self.get_current_url() == Urls.ORDER_PAGE
     
